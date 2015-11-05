@@ -8,8 +8,12 @@ public class Building {
     @Id
     @GeneratedValue
     private Long id;
+
     private String name;
+
+    @Column(unique=true)
     private String code;
+
     @OneToMany(targetEntity = Room.class)
     private List<Room> rooms;
 

@@ -12,7 +12,9 @@ public class Room {
     @ManyToOne
     private Building building;
     private String name;
-    private boolean enabled;
+
+    @Column(nullable = true, columnDefinition = "TINYINT(1)")
+    private boolean enabled = true;
 
     @OneToMany(mappedBy = "room")
     private List<Time> times;
