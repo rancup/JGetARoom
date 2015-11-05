@@ -1,5 +1,7 @@
 package org.rtk.getaroom.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -9,8 +11,10 @@ public class Time {
     @GeneratedValue
     private Long id;
     @ManyToOne
+    @JsonIgnore
     private Building building;
     @ManyToOne
+    @JsonIgnore
     private Room room;
     private String startTime;
     private String endTime;
