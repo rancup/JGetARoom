@@ -17,6 +17,14 @@ public class Building {
     @OneToMany(targetEntity = Room.class)
     private List<Room> rooms;
 
+    protected Building() {
+
+    }
+
+    public Building(String code) {
+        this.code = code;
+    }
+
     public Long getId() {
         return id;
     }

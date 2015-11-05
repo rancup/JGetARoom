@@ -16,14 +16,12 @@ public class BuildingController {
     @Autowired
     private BuildingRepository buildingRepository;
 
-//    @RequestMapping(Routes.buildingSingle, method =
-//            RequestMethod.GET)
-//    @ResponseBody
-//    public HttpEntity<Building> building(@PathVariable(value = "code") String code) {
-//        Building building = new Building(code);
-//        building.add(linkTo(methodOn(BuildingController.class).building(code)).withSelfRel());
-//        return new ResponseEntity<Building>(building, HttpStatus.OK);
-//    }
+    @RequestMapping(value = Routes.buildingSingle, method =
+            RequestMethod.GET)
+    @ResponseBody
+    public Building building(@PathVariable(value = "code") String code) {
+        return buildingRepository.findBuildingByCode(code);
+    }
 
     @RequestMapping(value = Routes.building, method = RequestMethod.GET)
     @ResponseBody
