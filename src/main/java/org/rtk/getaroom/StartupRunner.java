@@ -11,11 +11,11 @@ public class StartupRunner implements CommandLineRunner {
     @Autowired
     private DataSource ds;
 
-    @Autowired
+//    @Autowired
 //    private BookRepository bookRepository;
 
     @Override
     public void run(String... args) throws Exception {
-//        logger.info("Number of books: " + bookRepository.count());
+        logger.info("Number of books: " + ds.toString());
     }
 }
