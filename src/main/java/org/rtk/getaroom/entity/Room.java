@@ -12,7 +12,7 @@ public class Room {
     private Long id;
 
     @ManyToOne
-    @JsonIgnore
+//    @JsonIgnore
     private Building building;
     private String name;
 

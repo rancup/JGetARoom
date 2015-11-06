@@ -11,10 +11,10 @@ public class Time {
     @GeneratedValue
     private Long id;
     @ManyToOne
-    @JsonIgnore
+//    @JsonIgnore
     private Building building;
     @ManyToOne
-    @JsonIgnore
+//    @JsonIgnore
     private Room room;
     private String startTime;
     private String endTime;

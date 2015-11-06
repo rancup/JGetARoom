@@ -10,10 +10,10 @@ public class Routes {
     private static HashMap<String, String> routes;
 
     public static final String basepath = "";
-    public static final String apiv1 = basepath + "/api/v1/";
+    public static final String apiv1 = basepath + "api/v1/";
 
-    public static final String building = apiv1 + "building";
-    public static final String buildingSingle = apiv1 + "building/{code}";
+    public static final String building = apiv1 + "buildings";
+//    public static final String buildingSingle = apiv1 + "building/{code}";
     private static void setRoutes()
     {
         if(routes == null)
@@ -22,7 +22,7 @@ public class Routes {
 
             routes.put("basepath", basepath);
             routes.put("api.v1.building", building);
-            routes.put("api.v1.buildingSingle", buildingSingle);
+//            routes.put("api.v1.buildingSingle", buildingSingle);
         }
     }
 
