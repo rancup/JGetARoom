@@ -16,7 +16,7 @@ public class Room {
     private Building building;
     private String name;
 
-    @Column(nullable = true, columnDefinition = "TINYINT(1)")
+    @Column(nullable = false, columnDefinition="TINYINT(1) default 1")
     private boolean enabled = true;
 
     @OneToMany(mappedBy = "room")
